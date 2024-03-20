@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+         body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('backimg1.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .btn-container {
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .toggle-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #000000;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 100%;
+      }
+    }
+
+        .container h2 {
+            text-align: center;
+        }
+
+        .container label,
+        .container input[type="text"],
+        .container input[type="password"],
+        .container input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .container input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container" id="signup-container">
+        <h2 class="title">Login</h2>
+        <form action="login_process.js" method="POST">
+          <div class="form-group">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="btn">Login</button>
+          </div>
+        </form>
+        <p class="toggle-link">Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+      </div>
+</body>
+</html>
